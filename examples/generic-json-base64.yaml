@@ -1,0 +1,37 @@
+run:
+  name: 本地 mock 短音频测试
+  duration_seconds: 1
+  warmup_seconds: 0
+  seed: 7
+
+load:
+  mode: fixed_concurrency
+  concurrency: 2
+
+provider:
+  type: mock
+  latency_ms: 25
+  error_rate: 0
+
+scenarios:
+  - name: short_zh_audio
+    weight: 1
+    audio:
+      kind: synthetic
+      waveform: speech_like
+      duration_seconds: 0.25
+      sample_rate: 16000
+
+validation:
+  status_codes: [200]
+  json:
+    - path: $.text
+      exists: true
+
+thresholds:
+  max_error_rate: 0.05
+  p95_latency_ms: 1000
+
+reports:
+  output_dir: reports
+  formats: [json, csv, markdown, html]
