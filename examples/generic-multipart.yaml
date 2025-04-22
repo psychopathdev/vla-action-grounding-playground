@@ -1,0 +1,33 @@
+run:
+  name: multipart 语音接口测试
+  duration_seconds: 10
+  seed: 11
+load:
+  mode: fixed_concurrency
+  concurrency: 4
+provider:
+  type: generic_http
+  url: ${VOICE_API_URL}
+  headers:
+    Authorization: Bearer ${VOICE_API_TOKEN}
+  request:
+    kind: multipart
+    file_field: audio
+    fields:
+      model: speech-large
+      language: zh
+scenarios:
+  - name: short_file
+    weight: 1
+    audio:
+      kind: synthetic
+      waveform: speech_like
+      duration_seconds: 1
+validation:
+  status_codes: [200]
+  json:
+    - path: $.text
+      exists: true
+reports:
+  output_dir: reports
+  formats: [json, markdown]
