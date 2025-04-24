@@ -1,0 +1,24 @@
+run:
+  name: 流式网关计时示例
+  duration_seconds: 15
+load:
+  mode: arrival_rate
+  rate_per_second: 2
+  concurrency: 4
+provider:
+  type: generic_http
+  url: ${VOICE_STREAM_URL:-http://127.0.0.1:8765/v1/audio}
+  request:
+    kind: json
+    body:
+      audio: "{{audio_base64}}"
+      stream: true
+scenarios:
+  - name: stream_short
+    weight: 1
+    audio:
+      kind: synthetic
+      waveform: sine
+      duration_seconds: 0.5
+reports:
+  formats: [json, csv, markdown]
