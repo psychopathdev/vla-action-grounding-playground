@@ -1,0 +1,23 @@
+run:
+  name: 混合音频时长测试
+  duration_seconds: 20
+  warmup_seconds: 2
+  seed: 5
+load:
+  mode: fixed_concurrency
+  concurrency: 8
+provider:
+  type: mock
+  latency_ms: 40
+scenarios:
+  - name: short
+    weight: 6
+    audio: {kind: synthetic, waveform: speech_like, duration_seconds: 0.5}
+  - name: medium
+    weight: 3
+    audio: {kind: synthetic, waveform: speech_like, duration_seconds: 2}
+  - name: silence_control
+    weight: 1
+    audio: {kind: synthetic, waveform: silence, duration_seconds: 1}
+reports:
+  formats: [json, csv, markdown, html]
