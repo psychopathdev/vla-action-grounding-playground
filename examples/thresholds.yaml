@@ -1,0 +1,19 @@
+run:
+  name: CI 阈值测试
+  duration_seconds: 2
+load:
+  mode: fixed_concurrency
+  concurrency: 2
+provider:
+  type: mock
+  latency_ms: 10
+scenarios:
+  - name: ci_short
+    audio: {kind: synthetic, waveform: speech_like, duration_seconds: 0.1}
+thresholds:
+  max_error_rate: 0.01
+  p95_latency_ms: 500
+  min_requests_per_second: 1
+reports:
+  output_dir: reports/ci
+  formats: [json, markdown]
