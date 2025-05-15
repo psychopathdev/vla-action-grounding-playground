@@ -10,3 +10,12 @@
 - 在发布前压测自建语音识别或语音理解网关。
 - 对比不同音频时长下的接口延迟。
 - 在 CI 中用 mock 或内部环境验证延迟阈值。
+
+
+## 快速开始
+
+```bash
+python -m pip install -e ".[dev]"
+voicebench-load validate examples/generic-json-base64.yaml
+voicebench-load run examples/generic-json-base64.yaml
+```
