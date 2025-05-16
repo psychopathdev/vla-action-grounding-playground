@@ -19,3 +19,14 @@ python -m pip install -e ".[dev]"
 voicebench-load validate examples/generic-json-base64.yaml
 voicebench-load run examples/generic-json-base64.yaml
 ```
+
+
+## 最小配置
+
+```yaml
+provider:
+  type: mock
+scenarios:
+  - name: short
+    audio: {kind: synthetic, waveform: speech_like, duration_seconds: 0.5}
+```
