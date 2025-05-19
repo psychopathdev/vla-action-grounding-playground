@@ -30,3 +30,8 @@ scenarios:
   - name: short
     audio: {kind: synthetic, waveform: speech_like, duration_seconds: 0.5}
 ```
+
+
+## 负载模型
+
+当前支持固定并发、到达率和分阶段配置。固定并发适合快速冒烟，到达率适合容量估算，分阶段适合模拟渐进流量。
