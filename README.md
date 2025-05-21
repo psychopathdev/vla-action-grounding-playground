@@ -45,3 +45,8 @@ scenarios:
 ## 厂商中立
 
 工具只关心 HTTP 请求形状、响应状态、延迟和校验规则；不会假设某个供应商的私有协议。
+
+
+## 报告
+
+每次运行可以输出 JSON、CSV、Markdown 和 HTML。JSON 保留原始样本，Markdown 更适合发给团队阅读。
