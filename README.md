@@ -50,3 +50,8 @@ scenarios:
 ## 报告
 
 每次运行可以输出 JSON、CSV、Markdown 和 HTML。JSON 保留原始样本，Markdown 更适合发给团队阅读。
+
+
+## 阈值
+
+`thresholds` 可用于设置最大错误率、p95/p99 延迟和最低吞吐量。阈值失败时 CLI 返回退出码 1。
