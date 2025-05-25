@@ -55,3 +55,8 @@ scenarios:
 ## 阈值
 
 `thresholds` 可用于设置最大错误率、p95/p99 延迟和最低吞吐量。阈值失败时 CLI 返回退出码 1。
+
+
+## 密钥处理
+
+请使用环境变量传递 token，例如 `${VOICE_API_TOKEN}`。不要把真实 token 写入 YAML、报告或测试文件。
