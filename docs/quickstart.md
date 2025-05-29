@@ -17,3 +17,5 @@ voicebench-load validate examples/generic-json-base64.yaml
 ```bash
 voicebench-load run examples/generic-json-base64.yaml
 ```
+
+运行完成后默认在 `reports/` 下生成 `results.json`、`summary.md` 等文件。
