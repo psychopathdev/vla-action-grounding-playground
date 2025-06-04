@@ -8,3 +8,8 @@
 ## provider
 
 `type: mock` 用于本地测试；`type: generic_http` 用于真实 HTTP 接口。
+
+
+## scenarios
+
+每个场景有 `name`、`weight` 和 `audio`。权重越高，被选中的概率越大。
