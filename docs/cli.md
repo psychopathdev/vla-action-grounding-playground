@@ -15,3 +15,8 @@ voicebench-load validate voicebench.yaml
 ```bash
 voicebench-load run voicebench.yaml
 ```
+
+
+## generate-audio / inspect-audio
+
+这两个命令用于生成和检查最小 WAV 样本，便于调试请求模板。
