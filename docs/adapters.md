@@ -6,3 +6,6 @@
 - `generic_http`：面向普通 HTTP 语音接口，可发送 JSON、multipart 或 raw audio。
 
 项目不绑定具体供应商；如果某个网关使用 messages 风格 JSON，可以从 `messages_http` 作为模板扩展。
+
+
+请求模板支持 `{{audio_base64}}`、`{{audio_filename}}`、`{{audio_duration_ms}}` 和 `{{request_id}}`。
