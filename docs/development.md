@@ -7,3 +7,6 @@
 - `providers` 负责请求发送。
 - `runner` 负责编排。
 - `metrics`、`thresholds`、`reports` 负责结果处理。
+
+
+提交前建议运行 `pytest -q` 和 `python -m voicebench_load validate examples/generic-json-base64.yaml`。
