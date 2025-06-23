@@ -1,0 +1,19 @@
+run:
+  name: 本地 HTTP mock 服务测试
+  duration_seconds: 3
+load:
+  mode: arrival_rate
+  rate_per_second: 1
+  concurrency: 2
+provider:
+  type: generic_http
+  url: http://127.0.0.1:8765/v1/audio
+  request:
+    kind: json
+    body:
+      audio: "{{audio_base64}}"
+scenarios:
+  - name: local
+    audio: {kind: synthetic, waveform: speech_like, duration_seconds: 0.2}
+reports:
+  formats: [json, markdown]
