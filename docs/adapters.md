@@ -9,3 +9,11 @@
 
 
 请求模板支持 `{{audio_base64}}`、`{{audio_filename}}`、`{{audio_duration_ms}}` 和 `{{request_id}}`。
+
+
+## 扩展 checklist
+
+1. 定义请求格式。
+2. 明确认证来自环境变量。
+3. 返回 `ProviderResponse`。
+4. 为成功、超时、非 2xx 和解析失败补测试。
