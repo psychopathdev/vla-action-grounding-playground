@@ -7,3 +7,4 @@ All notable changes to this project are documented here.
 - Initial local development release.
 
 - Added typed YAML configuration and validation.
+- Added deterministic synthetic WAV generation and inspection.
