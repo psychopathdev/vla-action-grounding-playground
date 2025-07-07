@@ -8,3 +8,4 @@ All notable changes to this project are documented here.
 
 - Added typed YAML configuration and validation.
 - Added deterministic synthetic WAV generation and inspection.
+- Added mock and generic HTTP provider adapters.
