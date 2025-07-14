@@ -10,3 +10,4 @@ All notable changes to this project are documented here.
 - Added deterministic synthetic WAV generation and inspection.
 - Added mock and generic HTTP provider adapters.
 - Added async runner, metrics, thresholds, and reports.
+- Added CLI commands for validation, running, audio utilities, reports, and mock server.
