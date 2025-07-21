@@ -9,3 +9,4 @@
 - [CI 集成](ci.md)
 - [安全与伦理](safety-and-ethics.md)
 - [开发说明](development.md)
+- [故障排查](troubleshooting.md)
