@@ -1,0 +1,9 @@
+{
+  "summary": {
+    "total_requests": 1,
+    "measured_requests": 1,
+    "ok_requests": 1,
+    "error_rate": 0.0,
+    "requests_per_second": 1.0
+  }
+}
