@@ -10,3 +10,6 @@
 
 
 提交前建议运行 `pytest -q` 和 `python -m voicebench_load validate examples/generic-json-base64.yaml`。
+
+
+新增模块时，优先保持单一职责，并在 `tests/` 添加对应的最小覆盖。
