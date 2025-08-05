@@ -11,3 +11,4 @@
 - [开发说明](development.md)
 - [故障排查](troubleshooting.md)
 - [发布检查](release.md)
+- [术语表](glossary.md)
